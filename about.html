@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>About — My Site</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 2rem; line-height:1.5; }
+    header, footer { margin-bottom: 1rem; }
+    nav a { margin-right: .75rem; text-decoration:none; color:#0a66c2; }
+    #message { margin-top: 1.5rem; font-style: italic; color: #555; background: #f4f4f4; padding: .75rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About This Site</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="message">
+      <h2>WelcomeMessage</h2>
+      <p>Wellcome to my webpage!</p>
+    </section>
+
+
+    <p style="margin-top:1.5rem;">
+      <a href="/">← Back to Home</a>
+    </p>
+  </main>
+
+
+  <script>
+    // Read query string from the URL (e.g. ?msg=Hello)
+    const params = new URLSearchParams(window.location.search);
+    const msg = params.get('msg');
+
+    // Display message if it exists
+    if (msg) {
+      document.getElementById('message').textContent = decodeURIComponent(msg);
+    }
+  </script>
+</body>
+</html>

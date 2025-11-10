@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Home — My Site</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 2rem; line-height: 1.5; }
+    header { margin-bottom: 1.5rem; }
+    nav a { margin-right: 1rem; text-decoration: none; color: #0a66c2; }
+    main { max-width: 800px; }
+    .card { padding: 1rem; border: 1px solid #eee; border-radius: 8px; background:#fafafa; }
+    button { 
+      padding: 0.5rem 1rem; 
+      background-color: #0a66c2; 
+      border: none; 
+      border-radius: 5px; 
+      color: white; 
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #084b91;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Site</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Hello!</h2>
+      <p>This is the main page. Each link below passes a unique message to the About page:</p>
+
+      <!-- Links with unique messages -->
+      <p><a href="about.html?msg=Hello+from+the+main+page!">Go to About (Message 1)</a></p>
+      <p><a href="about.html?msg=This+is+a+special+greeting+from+Rust+Server!">Go to About (Message 2)</a></p>
+    </section>
+
+    <!-- New interactive section -->
+    <section style="margin-top:2rem;">
+      <h3>Try this!</h3>
+      <p>Click the button below to see an interactive popup:</p>
+      <button onclick="showPopup()">Show Popup</button>
+    </section>
+  </main>
+
+
+  <script>
+
+    // Simple interactive JavaScript function
+    function showPopup() {
+      alert("This is a pop-up test.");
+    }
+  </script>
+</body>
+</html>
